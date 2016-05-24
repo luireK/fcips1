@@ -26,20 +26,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //윈도우 객체 생성
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
-    //메인 VC객체 생성
-    MainViewController *mainVC =[[MainViewController alloc]init];
-    
-    //메인 VC배경 생성
-    [mainVC.view setBackgroundColor:[UIColor whiteColor ]];
-    
-    //window root로 mainVC설정
-    self.window.rootViewController = mainVC;
-    
-    //화면 갱신
-    [self.window makeKeyAndVisible];
-    
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    
+//    //메인 VC객체 생성
+//    MainViewController *mainVC =[[MainViewController alloc]init];
+//    
+//    //메인 VC배경 생성
+//    [mainVC.view setBackgroundColor:[UIColor whiteColor ]];
+//    
+//    //window root로 mainVC설정
+//    self.window.rootViewController = mainVC;
+//    
+//    //화면 갱신
+//    [self.window makeKeyAndVisible];
+//    
     return YES;
 }
 

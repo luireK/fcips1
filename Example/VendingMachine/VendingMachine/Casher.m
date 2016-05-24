@@ -69,7 +69,7 @@
         self.inputMoney %= 100;
     }
     
-    self.inputMoney %= 0;
+    self.inputMoney = 0;
     return changeDic;
 
 }

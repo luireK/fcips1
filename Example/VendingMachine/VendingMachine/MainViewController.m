@@ -18,18 +18,18 @@
 @property (nonatomic) Casher *casher;
 
 //메뉴 영역
-@property (nonatomic, weak) UIView *menuView;
+@property (nonatomic, weak) IBOutlet UIView *menuView;
 //500원 추가영역
-@property (nonatomic, weak) UIView *input500CoinArea;
+@property (nonatomic, weak) IBOutlet UIView *input500CoinArea;
 @property (nonatomic, weak) UILabel *title500CoinLb;
 @property (nonatomic, weak) UIButton *add500CoinBtn;
 
-//100원 추가영역
-@property (nonatomic, weak) UIView *input100CoinArea;
+//100원 추가영역IBOutlet
+@property (nonatomic, weak) IBOutlet UIView *input100CoinArea;
 @property (nonatomic, weak) UILabel *title100CoinLb;
 @property (nonatomic, weak) UIButton *add100CoinBtn;
 //돈 컨트롤 (남은돈 표시, 반환버튼)
-@property (nonatomic, weak) UIView *moneyControlArea;
+@property (nonatomic, weak) IBOutlet UIView *moneyControlArea;
 @property (nonatomic, weak) UILabel *moneyTitleLb;
 @property (nonatomic, weak) UITextField *remainMoneyShowTF;
 @property (nonatomic, weak) UIButton *moneyChangeBtn;
@@ -54,17 +54,14 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 //UI 객체생성
 -(void)creatView
 {
-    UIView *menuView = [[UIView alloc]init];
-    [menuView setBackgroundColor:[UIColor clearColor]];
-    [self.view addSubview:menuView];
-    self.menuView = menuView;
+//    UIView *menuView = [[UIView alloc]init];
+//    [menuView setBackgroundColor:[UIColor clearColor]];
+//    [self.view addSubview:menuView];
+//    self.menuView = menuView;
     {
         for (int i =0; i < maximumDrinkCount;i++){
             DrinkObject *drinkData =[self.trayBox.drinkKinds objectAtIndex:i];
@@ -74,7 +71,7 @@
             drinkBtn.delegate=self;
             [drinkBtn setTitle:drinkData.name];
             [drinkBtn setImageWithName:[NSString stringWithFormat:@"drink%d", i+1]];
-            [menuView addSubview:drinkBtn];
+            [self.menuView addSubview:drinkBtn];
             
             [self.drinkBtnList addObject:drinkBtn];
             
@@ -126,24 +123,24 @@
         
     }
     
-    UIView *moneyControlArea = [[UIView alloc]init];
-    [moneyControlArea setBackgroundColor:[UIColor clearColor]];
-    [self.view addSubview:moneyControlArea];
-    self.moneyControlArea = moneyControlArea;
+//    UIView *moneyControlArea = [[UIView alloc]init];
+//    [moneyControlArea setBackgroundColor:[UIColor clearColor]];
+//    [self.view addSubview:moneyControlArea];
+//    self.moneyControlArea = moneyControlArea;
     {
     
         UILabel *moneyTitleLb = [[UILabel alloc] init];
         moneyTitleLb.text = @"Money";
         moneyTitleLb.textColor = [UIColor blackColor];
         moneyTitleLb.font = [UIFont systemFontOfSize:15];
-        [moneyControlArea addSubview:moneyTitleLb];
+        [self.moneyControlArea addSubview:moneyTitleLb];
         self.moneyTitleLb = moneyTitleLb;
         
         UITextField *remainMoneyShowTF = [[UITextField alloc] init];
         remainMoneyShowTF.userInteractionEnabled = NO;
         remainMoneyShowTF.borderStyle = UITextBorderStyleLine;
         remainMoneyShowTF.textAlignment =NSTextAlignmentCenter;
-        [moneyControlArea addSubview:remainMoneyShowTF];
+        [self.moneyControlArea addSubview:remainMoneyShowTF];
         self.remainMoneyShowTF = remainMoneyShowTF;
         
         //잔돈반환버튼
@@ -152,9 +149,9 @@
         [moneyChangeBtn addTarget:self
                            action:@selector(onTouchupInsideMoneyChangeBtn:)
                  forControlEvents:UIControlEventTouchUpInside];
-        [moneyChangeBtn setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-        [moneyChangeBtn setTitleColor:[UIColor clearColor] forState:UIControlStateHighlighted];
-        [moneyControlArea addSubview:moneyChangeBtn];
+        [moneyChangeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [moneyChangeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+        [self.moneyControlArea addSubview:moneyChangeBtn];
         self.moneyChangeBtn = moneyChangeBtn;
         
     }
@@ -219,7 +216,7 @@
 
 //action
 
--(void)didSelectCustomButton:(CustomButton *)customBtn
+-(IBAction)didSelectCustomButton:(CustomButton *)customBtn
 {
     DrinkObject *drinkObj = [self.trayBox.drinkKinds objectAtIndex:customBtn.tag];
     
@@ -235,7 +232,7 @@
     
 }
 
--(void)onTouchupInsideMoneyChangeBtn:(UIButton *)sender
+-(IBAction)onTouchupInsideMoneyChangeBtn:(UIButton *)sender
 {
     //{@"500":count, @"100":count}
     NSDictionary *coinDic = [self.casher changeMoney];
@@ -251,7 +248,7 @@
     
 }
 
--(void)onTouchupInsideAddCoin:(UIButton *)sender
+-(IBAction)onTouchupInsideAddCoin:(UIButton *)sender
 {
     NSInteger tag = sender.tag;
     if (tag == 100){
