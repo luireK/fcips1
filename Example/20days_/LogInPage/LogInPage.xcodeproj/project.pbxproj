@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410654BA1D0006F20055F7EF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 410654B91D0006F20055F7EF /* SecondViewController.m */; };
+		410654BD1D00074E0055F7EF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 410654BC1D00074E0055F7EF /* MainViewController.m */; };
 		416A0E5B1CF2FD7B005BC893 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 416A0E5A1CF2FD7B005BC893 /* main.m */; };
 		416A0E5E1CF2FD7B005BC893 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 416A0E5D1CF2FD7B005BC893 /* AppDelegate.m */; };
 		416A0E611CF2FD7B005BC893 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 416A0E601CF2FD7B005BC893 /* ViewController.m */; };
@@ -15,6 +17,8 @@
 		416A0E691CF2FD7B005BC893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416A0E671CF2FD7B005BC893 /* LaunchScreen.storyboard */; };
 		416A0E741CF2FD7B005BC893 /* LogInPageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 416A0E731CF2FD7B005BC893 /* LogInPageTests.m */; };
 		416A0E7F1CF2FD7B005BC893 /* LogInPageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 416A0E7E1CF2FD7B005BC893 /* LogInPageUITests.m */; };
+		41D8E4081D0663DD001BD5EA /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D8E4071D0663DD001BD5EA /* DataCenter.m */; };
+		41D8E40A1D069178001BD5EA /* User_List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41D8E4091D069178001BD5EA /* User_List.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		410654B81D0006F20055F7EF /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		410654B91D0006F20055F7EF /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		410654BB1D00074E0055F7EF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		410654BC1D00074E0055F7EF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		416A0E561CF2FD7B005BC893 /* LogInPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogInPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		416A0E5A1CF2FD7B005BC893 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		416A0E5C1CF2FD7B005BC893 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +59,9 @@
 		416A0E7A1CF2FD7B005BC893 /* LogInPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogInPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		416A0E7E1CF2FD7B005BC893 /* LogInPageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInPageUITests.m; sourceTree = "<group>"; };
 		416A0E801CF2FD7B005BC893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41D8E4061D0663DD001BD5EA /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
+		41D8E4071D0663DD001BD5EA /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
+		41D8E4091D069178001BD5EA /* User_List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = User_List.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +114,15 @@
 			children = (
 				416A0E5C1CF2FD7B005BC893 /* AppDelegate.h */,
 				416A0E5D1CF2FD7B005BC893 /* AppDelegate.m */,
+				41D8E4061D0663DD001BD5EA /* DataCenter.h */,
+				41D8E4071D0663DD001BD5EA /* DataCenter.m */,
+				41D8E4091D069178001BD5EA /* User_List.plist */,
 				416A0E5F1CF2FD7B005BC893 /* ViewController.h */,
 				416A0E601CF2FD7B005BC893 /* ViewController.m */,
+				410654B81D0006F20055F7EF /* SecondViewController.h */,
+				410654B91D0006F20055F7EF /* SecondViewController.m */,
+				410654BB1D00074E0055F7EF /* MainViewController.h */,
+				410654BC1D00074E0055F7EF /* MainViewController.m */,
 				416A0E621CF2FD7B005BC893 /* Main.storyboard */,
 				416A0E651CF2FD7B005BC893 /* Assets.xcassets */,
 				416A0E671CF2FD7B005BC893 /* LaunchScreen.storyboard */,
@@ -246,6 +264,7 @@
 				416A0E691CF2FD7B005BC893 /* LaunchScreen.storyboard in Resources */,
 				416A0E661CF2FD7B005BC893 /* Assets.xcassets in Resources */,
 				416A0E641CF2FD7B005BC893 /* Main.storyboard in Resources */,
+				41D8E40A1D069178001BD5EA /* User_List.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,8 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410654BA1D0006F20055F7EF /* SecondViewController.m in Sources */,
 				416A0E611CF2FD7B005BC893 /* ViewController.m in Sources */,
 				416A0E5E1CF2FD7B005BC893 /* AppDelegate.m in Sources */,
+				410654BD1D00074E0055F7EF /* MainViewController.m in Sources */,
+				41D8E4081D0663DD001BD5EA /* DataCenter.m in Sources */,
 				416A0E5B1CF2FD7B005BC893 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +518,7 @@
 				416A0E851CF2FD7B005BC893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		416A0E861CF2FD7B005BC893 /* Build configuration list for PBXNativeTarget "LogInPageTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +527,7 @@
 				416A0E881CF2FD7B005BC893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		416A0E891CF2FD7B005BC893 /* Build configuration list for PBXNativeTarget "LogInPageUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +536,7 @@
 				416A0E8B1CF2FD7B005BC893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

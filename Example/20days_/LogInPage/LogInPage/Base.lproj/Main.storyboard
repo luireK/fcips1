@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -41,7 +41,8 @@
                                     <color key="titleColor" red="0.94245073755565423" green="0.95263641767881246" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8wp-aT-4ZN"/>
+                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qzw-az-Wp7"/>
+                                    <segue destination="EF2-X4-Pz2" kind="show" identifier="LOGIN_TO_MAIN" id="QIo-R6-3kI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGg-9k-tYb">
@@ -75,6 +76,7 @@
                             <constraint firstItem="bGg-9k-tYb" firstAttribute="top" secondItem="yUR-cS-6cr" secondAttribute="bottom" constant="27" id="z9v-bv-wnC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gXZ-mN-lhS"/>
                     <connections>
                         <outlet property="iidd" destination="sSR-nf-OAj" id="WDi-hy-i07"/>
                         <outlet property="ps" destination="adU-EJ-lRu" id="Lc9-MI-LnH"/>
@@ -82,17 +84,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="326"/>
+            <point key="canvasLocation" x="923" y="326"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="TSz-a4-T8v">
             <objects>
-                <viewController id="0o2-Ln-59G" sceneMemberID="viewController">
+                <viewController id="0o2-Ln-59G" customClass="SignupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hMl-3s-gnA"/>
                         <viewControllerLayoutGuide type="bottom" id="KNm-01-1KL"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zq5-NZ-BdW">
+                    <view key="view" contentMode="scaleToFill" id="zq5-NZ-BdW" customClass="SignupViewController">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -130,6 +132,9 @@
                                 <state key="normal" title="가입">
                                     <color key="titleColor" red="0.97881998049999996" green="0.98525005229999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="EF2-X4-Pz2" kind="show" id="MfU-kw-Z9I"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.94356142241379315" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,7 +156,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8be-P6-vy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641" y="326"/>
+            <point key="canvasLocation" x="1628" y="326"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="qUJ-GN-Hpi">
+            <objects>
+                <viewController id="EF2-X4-Pz2" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9ox-IZ-Nlf"/>
+                        <viewControllerLayoutGuide type="bottom" id="MKS-Ew-1jF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ATb-MM-tqu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQn-pe-s8K">
+                                <rect key="frame" x="274" y="76" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjQ-0m-F8l">
+                                <rect key="frame" x="278" y="196" width="44" height="30"/>
+                                <state key="normal" title="logout"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rU6-S0-VuT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="1133"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QIo-R6-3kI"/>
+    </inferredMetricsTieBreakers>
 </document>

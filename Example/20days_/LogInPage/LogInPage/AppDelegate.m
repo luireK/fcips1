@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
+#import "ViewController.h"
+#import "DataCenter.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    UINavigationController *navi;
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    if ([[DataCenter shardInstance] autoLogin]) {
+        MainViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"MainViewController"];
+        navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    }else{
+        ViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    }
+    
     return YES;
 }
 
